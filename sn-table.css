@@ -6,11 +6,10 @@
    - Adjust the selector if your object's DOM structure differs.
 */
 
-/* Center header label horizontally and vertically */
-.sn-table-head-label {
-  text-align: center;          /* horizontal centering of inline content */
-  place-self: center center;   /* aligns element in grid/flex context when supported */
-}
+/* -----------------------
+   Table
+   (table-level / column-specific rules)
+   -----------------------*/
 
 /* Force white background for specific columns (18 and 20) in the table
    inside the element with id #gQCwjLM_content.
@@ -18,7 +17,6 @@
    Notes:
    - nth-child() is 1-based — these selectors target the 18th and 20th columns.
    - Uses !important to override inline or higher-specificity styles coming from Qlik.
-   - Adjust the ID or column indices if the target table or column positions change.
 */
 #gQCwjLM_content table thead tr th:nth-child(18),
 #gQCwjLM_content table thead tr th:nth-child(20),
@@ -26,3 +24,44 @@
 #gQCwjLM_content table tbody tr td:nth-child(20) {
   background-color: white !important;
 }
+
+/* -----------------------
+   Heading
+   (header / title / menu related)
+   -----------------------*/
+
+/* Center flex alignment for generated component class */
+.sc-iFRVkA {
+  align-items: center !important;
+}
+
+/* Center header label horizontally and vertically */
+.sn-table-head-label {
+  text-align: center;          /* horizontal centering of inline content */
+  place-self: center center;   /* aligns element in grid/flex context when supported */
+}
+
+/* Hide Nebula table header menu wrapper */
+.nebula-table-utils-head-menu-wrapper {
+  display: none;
+}
+
+/* Hide Material-UI menu paper */
+.MuiMenu-paper {
+  display: none !important;
+}
+
+/* -----------------------
+   Row
+   (row / cell related)
+   -----------------------*/
+
+/* Disable pointer events on table cells (make them non-interactive) */
+.sn-table-cell {
+  pointer-events: none !important;
+}
+
+/* -----------------------
+   Footer
+   (no footer-specific rules at this time)
+   ----------------------- */

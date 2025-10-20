@@ -1,0 +1,9 @@
+/* ui.css
+   UI utility styles for Qlik Sense objects.
+   First entry hides a download button with id 'download'.
+   Use in sheet custom CSS or bundle into an extension stylesheet.
+*/
+
+#download {
+  display: none;
+}
