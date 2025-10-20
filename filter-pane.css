@@ -1,0 +1,19 @@
+/* Filter pane (selection box) styling.
+   Example target: #filterBox01_content
+*/
+
+/* Make selection pills rounded and consistent size */
+#filterBox01_content .filter-pill {
+  background: #f3f6fb;
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin: 4px;
+  display: inline-block;
+}
+
+/* Active selection pill */
+#filterBox01_content .filter-pill.active {
+  background: #2b7be4;
+  color: #fff;
+  font-weight: 600;
+}

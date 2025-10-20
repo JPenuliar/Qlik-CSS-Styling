@@ -1,0 +1,15 @@
+/* Container / sheet object container tweaks.
+   Example target: #container900_content
+*/
+
+/* Ensure consistent padding inside container items */
+#container900_content .container-item {
+  padding: 10px;
+}
+
+/* Header inside container: subtle border and bold label */
+#container900_content .container-header {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 6px;
+  font-weight: 600;
+}

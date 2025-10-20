@@ -1,0 +1,22 @@
+/* Bar chart styling snippet for Qlik Sense.
+   Example target: #chart123_content (replace with actual object id)
+*/
+
+/* Center chart title and increase weight */
+#chart123_content .qv-object-title {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Thicker bars with rounded ends and consistent color */
+#chart123_content .qv-chart-bar rect {
+  fill: #2b7be4 !important;
+  rx: 4px;                 /* rounded corners for SVG rects */
+  height: calc(100%);      /* ensure visible thickness when necessary */
+}
+
+/* Hover state */
+#chart123_content .qv-chart-bar rect:hover {
+  fill: #145db3 !important;
+  opacity: 0.95;
+}

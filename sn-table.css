@@ -1,0 +1,28 @@
+/* sn-table.css
+   Snippet: center table header labels for Qlik objects.
+
+   Notes:
+   - Can be used in sheet custom CSS or bundled into an extension stylesheet.
+   - Adjust the selector if your object's DOM structure differs.
+*/
+
+/* Center header label horizontally and vertically */
+.sn-table-head-label {
+  text-align: center;          /* horizontal centering of inline content */
+  place-self: center center;   /* aligns element in grid/flex context when supported */
+}
+
+/* Force white background for specific columns (18 and 20) in the table
+   inside the element with id #gQCwjLM_content.
+
+   Notes:
+   - nth-child() is 1-based — these selectors target the 18th and 20th columns.
+   - Uses !important to override inline or higher-specificity styles coming from Qlik.
+   - Adjust the ID or column indices if the target table or column positions change.
+*/
+#gQCwjLM_content table thead tr th:nth-child(18),
+#gQCwjLM_content table thead tr th:nth-child(20),
+#gQCwjLM_content table tbody tr td:nth-child(18),
+#gQCwjLM_content table tbody tr td:nth-child(20) {
+  background-color: white !important;
+}

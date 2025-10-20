@@ -1,0 +1,23 @@
+/* Pie / Donut chart styling snippet.
+   Example target: #pie789_content
+*/
+
+/* Increase legend spacing and center it horizontally */
+#pie789_content .legend {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Add stroke to slices for separation (SVG path) */
+#pie789_content svg path.slice {
+  stroke: #ffffff;
+  stroke-width: 1;
+}
+
+/* Hover slice effect */
+#pie789_content svg path.slice:hover {
+  transform: scale(1.03);
+  transition: transform 160ms ease;
+}

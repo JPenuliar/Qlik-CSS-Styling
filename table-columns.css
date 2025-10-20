@@ -1,0 +1,18 @@
+/* Table column specific styling.
+   Example target: #gQCwjLM_content (replace with the real table id)
+*/
+
+/* Existing snippet for columns 18 and 20, kept for consistency */
+#gQCwjLM_content table thead tr th:nth-child(18),
+#gQCwjLM_content table thead tr th:nth-child(20),
+#gQCwjLM_content table tbody tr td:nth-child(18),
+#gQCwjLM_content table tbody tr td:nth-child(20) {
+  background-color: #ffffff !important;
+}
+
+/* Align numeric columns to right and add monospace for digits */
+#gQCwjLM_content table tbody tr td.numeric,
+#gQCwjLM_content table thead tr th.numeric {
+  text-align: right;
+  font-family: "Segoe UI Mono", "Roboto Mono", monospace;
+}
