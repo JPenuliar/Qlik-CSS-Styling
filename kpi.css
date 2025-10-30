@@ -22,3 +22,8 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   padding: 8px;
 }
+
+/* left border on kpi container */
+#a1a34dfd-d8d8-460d-8016-11e2a5732f11_content {
+    border-left: 5px solid #92D050;
+}
