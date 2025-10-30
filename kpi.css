@@ -2,6 +2,13 @@
    Example target: #kpi45_content
 */
 
+/* Global Styling */
+.qv-object-kpi {
+    border-right: 0px!important;
+    border-top: 0px!important;
+    border-bottom: 0px!important;  
+}
+
 /* Center KPI value and label */
 #kpi45_content .kpi-value,
 #kpi45_content .kpi-label {
