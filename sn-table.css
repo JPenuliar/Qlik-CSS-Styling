@@ -36,6 +36,9 @@
 }
 
 /* Center header label horizontally and vertically */
+.MuiTableCell-head {
+    vertical-align: middle;
+}
 .sn-table-head-label {
   text-align: center;          /* horizontal centering of inline content */
   place-self: center center;   /* aligns element in grid/flex context when supported */
