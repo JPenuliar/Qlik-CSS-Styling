@@ -7,3 +7,10 @@
 #download {
   display: none;
 }
+
+/* 
+  Hide Container options
+*/
+#tabbed-container-menu{
+  display: none;
+}
