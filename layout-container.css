@@ -1,0 +1,9 @@
+/* Custom Override to Hide Container Submenu Options Globally */
+button[data-testid="layout-container-menu-submenu"] {
+    display: none !important;
+}
+
+/* Optional: Targets the specific class found in your DOM snippet as a backup */
+button.G3_ncp7HD9wKs799 {
+    display: none !important;
+}
