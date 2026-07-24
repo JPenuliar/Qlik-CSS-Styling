@@ -68,3 +68,10 @@
    Footer
    (no footer-specific rules at this time)
    ----------------------- */
+
+
+/* Specific target for the negative total column cell (index 8) */
+.sn-table-totals-row .sn-table-cell[data-col="8"] {
+  color: rgb(143, 43, 43);
+}
+
