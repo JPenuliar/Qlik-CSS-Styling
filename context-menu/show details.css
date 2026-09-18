@@ -1,0 +1,64 @@
+/**
+ * Qlik Sense Element Hiding & Shrinking Stylesheet
+ * 
+ * Target: [data-testid="show-details"]
+ * Purpose: A comprehensive suite of methods to hide an element and force 
+ *          Qlik's strict layout engine to collapse the remaining space.
+ */
+
+/* ==========================================================================
+   Method 1: The Display Method (Industry Standard & Most Reliable)
+   Completely removes the element from the document layout flow. Qlik's 
+   engine will instantly recalculate and shrink the surrounding space.
+   ========================================================================== */
+[data-testid="show-details"].qlik-hide-display {
+  /* Overrides Qlik's internal 'display: flex' or 'display: block' inline styles */
+  display: none !important; 
+}
+
+/* ==========================================================================
+   Method 2: The Dimension Zero-Out (Best for Flexbox & Multi KPI)
+   Forces Qlik's parent container to shrink by stripping all sizing properties
+   while keeping the element's visibility state set to hidden.
+   ========================================================================== */
+[data-testid="show-details"].qlik-hide-dimensions {
+  visibility: hidden !important;
+  
+  /* Force Qlik's engine to shrink the bounding box */
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  
+  /* Strip padding/margins often injected by Qlik visualization extensions */
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  
+  /* Strictly required to hide inner icons/text that Qlik centers */
+  overflow: hidden !important; 
+}
+
+/* ==========================================================================
+   Method 3: Absolute Out-Of-Flow (Best for Qlik Sheet Grid Layouts)
+   Removes the button from Qlik's strict flow so neighboring KPIs or 
+   objects immediately shift and claim the empty space.
+   ========================================================================== */
+[data-testid="show-details"].qlik-hide-absolute {
+  visibility: hidden !important;
+  
+  /* Breaks the element out of Qlik's rigid layout grid */
+  position: absolute !important; 
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+/* ==========================================================================
+   Method 4: Native Collapse (Best for Qlik Table/Pivot Custom Formatting)
+   If you are hiding elements inside native Qlik tables via custom CSS,
+   'collapse' natively drops the row/column width to zero.
+   ========================================================================== */
+[data-testid="show-details"].qlik-hide-collapse {
+  /* Acts like display:none for tables but satisfies visibility constraints */
+  visibility: collapse !important; 
+}
