@@ -1,0 +1,30 @@
+/**
+ * Target: [data-testid="download"]
+ * Purpose: Hide and collapse layout footprint in Qlik dashboards.
+ */
+
+/* Method 1: Display Method (Industry Standard) */
+[data-testid="download"] {
+  display: none !important;
+}
+
+/* Method 2: Dimension Zero-Out (Visibility Alternative) */
+[data-testid="download"] {
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+/* Method 3: Absolute Out-Of-Flow (Breakout Alternative) */
+[data-testid="download"] {
+  visibility: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
